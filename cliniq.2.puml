@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+actor "คนไข้" as pt
+actor "หมอ" as dt
+actor "เสมี่ยน" as cl
+actor "คนจัดตารางนัด" as tb
+package ระบบนัดหมายในคลีนิค {
+  usecase "ทำการนัด" as UC1
+  usecase "ยกเลิกนัด" as UC2
+  usecase "เข้ารับการรักษา" as UC3
+  usecase "จ่ายเงิน" as UC4
+}
+pt --> UC1
+pt --> UC2
+pt --> UC3
+pt --> UC4
+UC3 <-- dt
+UC4 <-- cl
+UC1 <-- tb
+UC2 <-- tb
+@enduml

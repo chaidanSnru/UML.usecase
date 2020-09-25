@@ -1,0 +1,15 @@
+@startuml
+:ลูกค้า: as lk
+:พ่อครัว: as pk
+:เด็กเสริพ: as dss
+rectangle ร้านอาหาร {
+(สั่งอาหาร) as sah
+(จ่ายเงิน) as jng
+(นัดเด็กเสริพ) as ds
+(ทำอาหาร) as tah
+}
+lk --> jng
+lk --> sah
+lk --> dss
+pk --> tah
+@enduml
